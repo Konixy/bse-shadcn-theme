@@ -16,12 +16,12 @@
 
 <Html>
 	<Head />
-	<Body class="bg-zinc-100">
+	<Body class="bg-background">
 		<Preview preview="Welcome Email" />
-		<Container class="m-8 mx-auto max-w-lg rounded-2xl bg-white p-8">
+		<Container class="m-8 mx-auto max-w-lg rounded-2xl border border-border bg-card p-8">
 			<Section class="mx-auto text-center">
-				<Text class="text-2xl font-bold text-zinc-900">Welcome {name}!</Text>
-				<Text class="mt-3 text-zinc-600">
+				<Text class="text-2xl font-bold text-foreground">Welcome {name}!</Text>
+				<Text class="mt-3 text-muted-foreground">
 					Better Svelte Email converts Svelte components into email-safe HTML.
 				</Text>
 				<Row class="mt-6">
@@ -29,7 +29,7 @@
 						href="https://better-svelte-email.konixy.fr/docs"
 						pX={24}
 						pY={14}
-						class="mr-2 rounded-lg bg-orange-600 text-white"
+						class="mr-2 rounded-lg bg-primary text-primary-foreground"
 					>
 						Explore the docs
 					</Button>
@@ -37,7 +37,7 @@
 						href="https://github.com/Konixy/better-svelte-email"
 						pX={24}
 						pY={14}
-						class="ml-2 rounded-lg border border-zinc-200 text-zinc-900"
+						class="ml-2 rounded-lg border border-border text-foreground"
 					>
 						or the GitHub
 					</Button>
