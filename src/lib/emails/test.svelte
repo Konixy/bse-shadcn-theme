@@ -1,47 +1,69 @@
-<script>
+<script lang="ts">
 	import {
 		Html,
 		Head,
 		Body,
-		Preview,
 		Container,
 		Section,
+		Heading,
 		Text,
 		Button,
-		Row
+		Hr
 	} from 'better-svelte-email';
-
-	let { name = 'there' } = $props();
 </script>
 
 <Html>
 	<Head />
-	<Body class="bg-background">
-		<Preview preview="Welcome Email" />
-		<Container class="m-8 mx-auto max-w-lg rounded-2xl border border-border bg-card p-8">
-			<Section class="mx-auto text-center">
-				<Text class="text-2xl font-bold text-foreground">Welcome {name}!</Text>
-				<Text class="mt-3 text-muted-foreground">
-					Better Svelte Email converts Svelte components into email-safe HTML.
+	<Body class="bg-background font-sans">
+		<Container class="mx-auto max-w-[600px] py-10">
+			<!-- Hero Section -->
+			<Section class="mb-8 text-center">
+				<Heading as="h1" class="mb-2 text-3xl font-bold text-foreground">
+					shadcn/ui Email Styles
+				</Heading>
+				<Text class="text-muted-foreground">Beautiful semantic colors for email templates</Text>
+			</Section>
+
+			<!-- Primary Action Card -->
+			<Section class="mb-6 rounded-lg bg-card p-6">
+				<Heading as="h2" class="mb-3 text-xl font-semibold text-card-foreground">
+					Primary Action
+				</Heading>
+				<Text class="mb-4 text-muted-foreground">
+					The primary color creates strong call-to-action buttons
 				</Text>
-				<Row class="mt-6">
-					<Button
-						href="https://better-svelte-email.konixy.fr/docs"
-						pX={24}
-						pY={14}
-						class="mr-2 rounded-lg bg-primary text-primary-foreground"
-					>
-						Explore the docs
-					</Button>
-					<Button
-						href="https://github.com/Konixy/better-svelte-email"
-						pX={24}
-						pY={14}
-						class="ml-2 rounded-lg border border-border text-foreground"
-					>
-						or the GitHub
-					</Button>
-				</Row>
+				<Button
+					href="https://shadcn-svelte.com/docs/theming"
+					class="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
+				>
+					Get Started
+				</Button>
+			</Section>
+
+			<!-- Secondary Action Section -->
+			<Section class="mb-6 rounded-lg bg-secondary p-6">
+				<Heading as="h2" class="mb-3 text-xl font-semibold text-secondary-foreground">
+					Secondary Actions
+				</Heading>
+				<Text class="mb-4 text-secondary-foreground">
+					Secondary colors provide subtle alternatives
+				</Text>
+				<Button
+					href="#"
+					class="rounded-md border bg-card px-6 py-3 text-sm font-medium text-card-foreground"
+				>
+					Learn More
+				</Button>
+			</Section>
+
+			<!-- Divider -->
+			<Hr class="my-8 border" />
+
+			<!-- Footer -->
+			<Section class="text-center">
+				<Text class="text-sm text-muted-foreground">
+					Built with better-svelte-email and shadcn-svelte
+				</Text>
 			</Section>
 		</Container>
 	</Body>
